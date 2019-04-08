@@ -22,6 +22,9 @@ class ExternalAPITests(APITestCase):
             sorted(list(response.json().keys()))
         )
 
+        self.assertEqual(response.data['status_code'], 200)
+        self.assertEqual(response.data['status'], 'success')
+
         if len(response.data['data']) > 0:
             keys = sorted(list(response.data['data'][0].keys()))
             expected_keys = sorted([
