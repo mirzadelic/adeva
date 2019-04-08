@@ -18,7 +18,8 @@ from django.urls import path, include
 
 api_urls = (
     [
-        path('external/', include('external.urls'))
+        path('external/', include('external.urls')),
+        path('local/', include('local.urls')),
     ],
     'api'
 )

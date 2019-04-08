@@ -2,10 +2,15 @@
 
 # Install:
 Use `virtualenv` or `pyenv` to create separated python environment, and use `python 3`.
+Configure `.env.example` file with your Postgres settings and create database.
 ```
+source .env.example
 pip install -r requirements.txt
-python manage.py migrate
-python manage.py runserver
+```
+
+# Run:
+```
+python manage.py migrate && python manage.py runserver
 ```
 
 # External API urls:
