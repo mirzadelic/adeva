@@ -3,6 +3,7 @@ from rest_framework.viewsets import ModelViewSet
 
 from .models import Book
 from .serializers import BookSerializer
+from .filters import BookFilter
 
 
 class BooksViewSet(ModelViewSet):
@@ -12,6 +13,7 @@ class BooksViewSet(ModelViewSet):
 
     queryset = Book.objects.all()
     serializer_class = BookSerializer
+    filter_class = BookFilter
 
     def response_format(self, response, name=None):
         r = {
