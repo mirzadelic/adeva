@@ -69,6 +69,26 @@ class LocalAPITests(APITestCase):
                 b = Book.objects.get(pk=book['id'])
                 self.assertEqual(b.name, book['name'])
 
+    def test__api__list__with_year_filter(self):
+        """
+        List books with year filter from local API
+        """
+
+        url = reverse('api:local:books-list')
+        response = self.client.get(url, {'date': '1996'})
+
+        self.assertEqual(len(response.data['data']), 1)
+
+    def test__api__list__with_name_filter(self):
+        """
+        List books with name filter from local API
+        """
+
+        url = reverse('api:local:books-list')
+        response = self.client.get(url, {'name': 'A Game of Thrones'})
+
+        self.assertEqual(len(response.data['data']), 1)
+
     def test__api__create(self):
         """
         POST request to local API
