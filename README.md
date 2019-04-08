@@ -14,5 +14,11 @@ python manage.py migrate && python manage.py runserver
 ```
 
 # External API urls:
- - `http://localhost:8000/api/external/books/` - List all books from external call
+ - `http://localhost:8000/api/external/books/` - List all books from external api
  - `http://localhost:8000/api/external/books/?name=A Clash of Kings` - List all books from external call with a name `A Clash of Kings`
+
+# Local API urls:
+ - `GET` - `http://localhost:8000/api/local/books/` - List all books
+ - `GET` - `http://localhost:8000/api/local/books/{id}/` - Detail book
+ - `PUT`/`PATCH` - `http://localhost:8000/api/local/books/{id}/` - Update book
+ - `DELETE` - `http://localhost:8000/api/local/books/{id}/` - Delete book
