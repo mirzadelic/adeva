@@ -19,6 +19,7 @@ python manage.py migrate && python manage.py runserver
 
 # Local API urls:
  - `GET` - `http://localhost:8000/api/local/books/` - List all books
+ - `GET` - `http://localhost:8000/api/local/books/?date=2019` - List all books that are released at 2019 year, filters work with fields: `name`, `country`, `publisher`, `date`
  - `GET` - `http://localhost:8000/api/local/books/{id}/` - Detail book
  - `PUT`/`PATCH` - `http://localhost:8000/api/local/books/{id}/` - Update book
  - `DELETE` - `http://localhost:8000/api/local/books/{id}/` - Delete book
