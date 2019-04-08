@@ -22,3 +22,8 @@ python manage.py migrate && python manage.py runserver
  - `GET` - `http://localhost:8000/api/local/books/{id}/` - Detail book
  - `PUT`/`PATCH` - `http://localhost:8000/api/local/books/{id}/` - Update book
  - `DELETE` - `http://localhost:8000/api/local/books/{id}/` - Delete book
+
+# Run Tests:
+```
+python manage.py test
+```
